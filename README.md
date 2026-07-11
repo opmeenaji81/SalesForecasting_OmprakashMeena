@@ -67,12 +67,23 @@ python -m streamlit run app.py
 
 ---
 
-## 📊 Dashboard Preview
+# Dashboard Preview
 
+### Home Page
 
-![alt text](image.png)
+![Home](images/home.png)
 
----
+### Dashboard
+
+![Dashboard](images/dashboard.png)
+
+### Forecast
+
+![Forecast](images/forecast.png)
+
+### Prediction
+
+![Prediction](images/prediction.png)
 
 ## 📌 Future Improvements
 

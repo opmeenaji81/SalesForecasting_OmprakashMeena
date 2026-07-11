@@ -22,7 +22,7 @@ st.markdown("---")
 # Dataset loading
 
 sales_df = pd.read_csv("train.csv")
-vg_df = pd.read_csv("vgsales.csv")
+vg_df = pd.read_csv("vgsales_processed.csv")
 
 sales_df["Order Date"] = pd.to_datetime(
     sales_df["Order Date"],
@@ -61,15 +61,15 @@ selected_region = st.sidebar.multiselect(
 
 selected_category = st.sidebar.multiselect(
     "Selecte Category",
-    options = sorted(sales_df["Category"].uniqe()),
-    default = sorted(sales_df["Category"].uniqe())
+    options = sorted(sales_df["Category"].unique()),
+    default = sorted(sales_df["Category"].unique())
 )
 
 selected_segment = st.sidebar.multiselect(
     "Select Segment",
-    options = sorted(sales_df["Segment"].uniques()),
+    options = sorted(sales_df["Segment"].unique()),
     default = sorted(sales_df["Segment"].unique()),
-    default = sorted(sales_df["Segment"].uniqe())
+    
 )
 
 # applyling filters
@@ -268,27 +268,27 @@ elif page == "Forecasting":
 # anomaly Detection page
 
 elif page == "Anomaly Detection":
-    
+
     st.header("⚠️ Anomaly Detection")
-    
+
     st.write(
-        "Isolation Forest was used to identify unusual sales record "
+        "Isolation Forest was used to identify unusual sales records "
         "in the Video Game Sales dataset."
     )
-    
+
     anomaly_count = (vg_df["Anomaly"] == -1).sum()
-    
+
     st.metric("Detected Anomalies", anomaly_count)
-    
+
     fig = px.scatter(
         vg_df,
-        x = "Global_Sales",
-        y = "NA_Sales",
-        color = "Anomaly",
-        title = "Isolation Forest Results"
+        x="Global_Sales",
+        y="NA_Sales",
+        color="Anomaly",
+        title="Isolation Forest Results"
     )
-    
-    st.plotly_chart(fig, use_container_width= True)
+
+    st.plotly_chart(fig, use_container_width=True)
     
 # Clusterin Page
 

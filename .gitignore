@@ -1,12 +1,13 @@
 __pycache__/
-.ipynb_checkpoints/
+*.pyc
 
 .venv/
 venv/
-env/
 
-*.pyc
-
-.DS_Store
+.ipynb_checkpoints/
 
 .streamlit/
+
+*.pkl
+
+.env
