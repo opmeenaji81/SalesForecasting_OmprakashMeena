@@ -224,6 +224,12 @@ if page == "Dashboard":
         use_container_width= True
     )
     
+    st.markdown("---")
+
+    st.subheader("📋 Filtered Dataset Preview")
+
+    st.dataframe(filtered_df.head(20))
+    
     
     # download filtered data
     
@@ -305,3 +311,12 @@ elif page == "Clustering":
     )
     
     st.plotly_chart(fig, use_container_width= True)
+    
+    
+# Footer
+
+st.markdown("---")
+
+st.caption(
+    "Developed by Omprakash Meena | Xylofi Internship Project | Sales Forecasting using Machine Learning"
+)
