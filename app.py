@@ -31,7 +31,14 @@ sales_df["Order Date"] = pd.to_datetime(
 
 # Sidebar
 
-st.sidebar.title("Navigation")
+st.sidebar.image(
+    "https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png",
+    width=120
+)
+
+st.sidebar.title("Sales Forecasting Dashboard")
+
+st.sidebar.markdown("---")
 page = st.sidebar.radio(
     "Select Page",
     [
@@ -297,4 +304,4 @@ elif page == "Clustering":
         color = "Cluster"
     )
     
-    st.plotly_chart(figm use_container_width= True)
+    st.plotly_chart(fig, use_container_width= True)
