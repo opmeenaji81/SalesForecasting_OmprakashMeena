@@ -85,12 +85,6 @@ python -m streamlit run app.py
 
 ![Prediction](images/prediction.png)
 
-## 📌 Future Improvements
-
-- Multiple Forecasting Models
-- Model Comparison
-- Cloud Deployment
-- Live Data Integration
 
 ---
 
