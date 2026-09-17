@@ -3,6 +3,9 @@
 An interactive Sales Forecasting Dashboard built using Python, Machine Learning, and Streamlit. The application predicts future sales based on historical data and provides interactive visualizations for business analysis.
 
 ---
+## Live Demo
+
+https://salesforcastingbyom.streamlit.app/
 
 ## 🚀 Features
 
